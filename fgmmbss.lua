@@ -317,8 +317,15 @@ local function addmemorymatcher(name)
     tab:AddButton({
         Title = "Print Timer",
         Callback = function()
-            local toyname = name .. " Memory Match"
             local Cc = require(game.ReplicatedStorage.ClientStatCache)
+            local toyname = name .. " Memory Match"
+            if not Cc:Get().ToyTimes[toyname] then
+                return Fluent:Notify({
+                    Title = "Memory Match",
+                    Content = "You have not yet unlocked this toy. You must actually unlock it first before attempting to use Ghost MM",
+                    Duration = 7
+                })
+            end
             local t = (workspace.Toys[toyname].Cooldown.Value + Cc:Get().ToyTimes[toyname]) - os.time()
             local str = t > 0 and string.format("%d:%02d:%02d", t//3600, (t%3600)//60, t%60) or "Now ✅"
             Fluent:Notify({
