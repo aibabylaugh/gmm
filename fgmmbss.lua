@@ -1,3 +1,4 @@
+-- i knew you was finna skid it like a good boy ✌
 local fluent = loadstring(game:HttpGet("https://github.com/dawid-scripts/Fluent/releases/latest/download/main.lua"))()
 local options = fluent.Options
 local MemoryMatchManager = game:GetService("ReplicatedStorage").MemoryMatchManager
