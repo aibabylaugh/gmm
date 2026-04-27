@@ -1,5 +1,14 @@
--- i knew you was finna skid it like a good boy ✌
+
 local fluent = loadstring(game:HttpGet("https://github.com/dawid-scripts/Fluent/releases/latest/download/main.lua"))()
+
+do
+	return fluent:Notify({
+		Title = "Ghost MM",
+		Content = "Dont use this script anymore, you will get banned.",
+		Duration = 20
+	})
+end
+
 local options = fluent.Options
 local MemoryMatchManager = game:GetService("ReplicatedStorage").MemoryMatchManager
 local MemoryMatchGui = game:GetService("ReplicatedStorage").Gui.MemoryMatch
